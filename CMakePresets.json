@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {"name":"Debug","generator":"Ninja","binaryDir":"${sourceDir}/build/Debug","cacheVariables":{"CMAKE_BUILD_TYPE":"Debug","CMAKE_TOOLCHAIN_FILE":"${sourceDir}/cmake/arm-gcc.cmake","IGW_TEST_BOOT_FAIL":"OFF","IGW_VERSION":"0x00030000"}},
+    {"name":"Release","inherits":"Debug","binaryDir":"${sourceDir}/build/Release","cacheVariables":{"CMAKE_BUILD_TYPE":"Release","IGW_TEST_BOOT_FAIL":"OFF"}},
+    {"name":"Upgrade","inherits":"Release","binaryDir":"${sourceDir}/build/Upgrade","cacheVariables":{"IGW_VERSION":"0x00030001"}},
+    {"name":"Failure","inherits":"Release","binaryDir":"${sourceDir}/build/Failure","cacheVariables":{"IGW_TEST_BOOT_FAIL":"ON","IGW_VERSION":"0x00030002"}}
+  ],
+  "buildPresets":[{"name":"Debug","configurePreset":"Debug"},{"name":"Release","configurePreset":"Release"},{"name":"Upgrade","configurePreset":"Upgrade"},{"name":"Failure","configurePreset":"Failure"}]
+}

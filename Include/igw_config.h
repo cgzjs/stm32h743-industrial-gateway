@@ -1,0 +1,41 @@
+#ifndef IGW_CONFIG_H
+#define IGW_CONFIG_H
+#include <stdint.h>
+/* Apollo STM32H743IIT6, 2 MiB internal / W25Q256 32 MiB external. */
+#define IGW_BOARD_ID 0x743A0001u
+#ifndef IGW_FW_VERSION
+#define IGW_FW_VERSION 0x00030000u
+#endif
+#define IGW_APP_BASE 0x08020000u
+#define IGW_IDENTITY_OFFSET 0x400u
+#define IGW_APP_CAPACITY 0x001E0000u
+#define IGW_NOR_CAPACITY 0x02000000u
+#define IGW_NOR_SECTOR 4096u
+#define IGW_META0 0x00000000u
+#define IGW_META1 0x00001000u
+#define IGW_CONFIG0 0x00002000u
+#define IGW_CONFIG1 0x00003000u
+#define IGW_SLOT_A 0x00010000u
+#define IGW_SLOT_B 0x00210000u
+#define IGW_SLOT_SPAN 0x00200000u
+#define IGW_IMAGE_DATA_OFFSET 4096u
+#define IGW_OTA_PORT 5001u
+#define IGW_MODBUS_PORT 502u
+#define IGW_OTA_CHUNK 1024u
+#define IGW_MOTOR_NODE 1u
+#define IGW_CAN_ID 0x1001u
+/* Verified against user-provided CAN example can_send_long_msg(), V1.2. */
+#define IGW_PD42_STREAM_CONFIRMED 1
+#define IGW_MAX_RPM 600u
+#define IGW_COMMAND_LEASE_MS 2000u
+#define IGW_DEVICE_TIMEOUT_MS 2500u
+#define IGW_SENSOR_ADDRESS 1u
+#define IGW_SENSOR_BAUD 9600u
+#define IGW_SENSOR_FUNCTION 3u
+#define IGW_SENSOR_FIRST_REGISTER 0u
+#define IGW_SENSOR_TEMP_INDEX 0u
+#define IGW_SENSOR_HUM_INDEX 1u
+#define IGW_SENSOR_MULTIPLIER 1u /* source values already in 0.1 units */
+#define IGW_LCD_WIDTH 320u
+#define IGW_LCD_HEIGHT 240u
+#endif

@@ -1,0 +1,22 @@
+{
+  "STM32CubeH7": {
+    "tag": "v1.12.1",
+    "commit": "f5c0b7a2b1f6eb26fde150f72edb2d7deb647066",
+    "url": "https://github.com/STMicroelectronics/STM32CubeH7"
+  },
+  "STM32H7xx_HAL_Driver": {
+    "commit": "57ed86b4c358e2333a71fd895b17f1ccdb68739e",
+    "source": "STM32CubeH7 submodule",
+    "url": "https://github.com/STMicroelectronics/stm32h7xx_hal_driver.git"
+  },
+  "cmsis_device_h7": {
+    "commit": "e8d40ae6e2fa06afe5b46d24756f141b363342a7",
+    "source": "STM32CubeH7 submodule",
+    "url": "https://github.com/STMicroelectronics/cmsis_device_h7.git"
+  },
+  "lvgl": {
+    "tag": "v8.3.11",
+    "commit": "74d0a816a440eea53e030c4f1af842a94f7ce3d3",
+    "url": "https://github.com/lvgl/lvgl"
+  }
+}
